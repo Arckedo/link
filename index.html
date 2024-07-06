@@ -1,9 +1,362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Redirection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meilleur site du monde UZU</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <style>
+        body {
+            font-family: 'Permanent Marker', cursive;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
+            font-size: 2.5vw; /* Taille de police responsive */
+            max-width: 90%; /* Limite la largeur à 90% de son conteneur */
+            margin: 20px auto; /* Centre le titre et ajoute de l'espace au-dessus et en-dessous */
+            word-wrap: break-word; /* Permet le retour à la ligne des mots longs */
+            hyphens: auto; /* Ajoute des traits d'union si nécessaire */
+        }
+
+        /* Ajustement pour les écrans plus petits */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 5vw; /* Augmente la taille relative sur les petits écrans */
+            }
+        }
+        .hoodie-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+            margin-bottom: 20px;
+            overflow: hidden;
+            width: 250px;
+            height: 350px;
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+
+        
+        .hoodie-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 70%);
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+            animation-delay: var(--delay);
+        }
+        
+        .hoodie-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+.hoodie-container:hover::before {
+    opacity: 1;
+}
+
+
+        @keyframes shine {
+            0% {
+                transform: rotate(30deg) translate(-150%, -150%);
+            }
+            100% {
+                transform: rotate(30deg) translate(150%, 150%);
+            }
+        }
+        .hoodie-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
+        }
+        p {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
+        }
+
+        .hoodie-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+            margin-bottom: 20px;
+            overflow: hidden;
+            width: 250px;
+            height: 350px;
+            transition: transform 0.3s ease;
+        }
+
+        .hoodie-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                115deg,
+                transparent 20%,
+                rgba(255, 255, 255, 0.4) 36%,
+                rgba(255, 255, 255, 0.7) 43%,
+                rgba(255, 255, 255, 0.4) 50%,
+                transparent 80%
+            );
+            transform: rotate(0deg);
+            animation: shine 3s infinite;
+            animation-delay: var(--delay);
+        }
+
+        .hoodie-container:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-50%) translateY(-50%) rotate(0deg);
+            }
+            100% {
+                transform: translateX(50%) translateY(50%) rotate(25deg);
+            }
+        }
+
+        .hoodie-container img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .hoodie-container p {
+            font-size: 14px;
+            color: #ad81b1;
+            text-shadow: none;
+            margin: 0;
+            padding: 5px;
+            background-color: rgba(12, 4, 10, 0.7);
+            border-radius: 5px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <p>Si tu n'es pas redirigé, <a href="https://www.youtube.com/watch?v=3zzCyP5pdak">click ici</a>.</p>
+    <div id="particles-js"></div>
+    <div class="content">
+        <h1>BONNE NANIVERZAIRETITOUANNNN!!!!!!!</h1>
+
+        <div class="hoodie-container">
+            <img src="images/Hoodie Front.png" alt="Hoodie Front">
+            <p>The code doesn't work... Why? The code works... Why?</p>
+        </div>
+
+        <div class="hoodie-container">
+            <img src="images/Hoodie Back.png" alt="Hoodie Back">
+            <p>Mage noir en devenir AKA Virgin for ever</p>
+        </div>
+        <div class="hoodie-container">
+            <img src="images/Titouxt.png" alt="Hoodie Back">
+            <p>EL PODDDDDDDDDDEEEEEEERR</p>
+        </div>
+
+        <p>Bonne Anniversaire, Titouan!</p>
+        
+        <p>Arrive entre le 15 et le 17 Juillet !</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ff00ff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ff00ff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Add random delay to each hoodie container
+        document.querySelectorAll('.hoodie-container').forEach(container => {
+            const randomDelay = Math.random() * 5 + 's'; // Random delay between 0 and 5 seconds
+            container.style.setProperty('--delay', randomDelay);
+        });
+        
+        document.querySelectorAll('.hoodie-container').forEach(container => {
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const moveX = (x - centerX) / centerX;
+                const moveY = (y - centerY) / centerY;
+
+                const rotateY = moveX * 20; // Augmentez ou diminuez pour plus ou moins de rotation
+                const rotateX = -moveY * 20; // Augmentez ou diminuez pour plus ou moins de rotation
+
+                container.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+
+                const light = container.querySelector('::before');
+                if (light) {
+                    light.style.backgroundPosition = `${x / 5}px ${y / 5}px`;
+                }
+            });
+
+            container.addEventListener('mouseleave', () => {
+                container.style.transform = 'perspective(1000px) rotateY(0) rotateX(0)';
+            });
+        });
+    </script>
 </body>
 </html>
